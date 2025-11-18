@@ -1,7 +1,7 @@
 {
   "name": "dep-finder",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "packageManager": "pnpm@10.22.0",
   "description": "A CLI tool for discovering dependency usage across multiple repositories.",
   "author": "jinghaihan",
