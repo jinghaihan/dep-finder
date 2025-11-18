@@ -16,6 +16,7 @@ try {
 
   cli
     .command('', 'Discover dependency usage across multiple repositories')
+    .option('--cwd <cwd>', 'The directory to search for packages')
     .option('--dep <dep>', 'The dependency to discover')
     .option('--get-version', 'Get the latest version of the dependencies')
     .option('--editor [editor]', 'Open the files in the editor')

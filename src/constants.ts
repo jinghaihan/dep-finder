@@ -19,26 +19,27 @@ export const DEP_TYPES = [
   'pnpm.overrides',
 ] as const
 
+/// keep-sorted
 export const EDITOR_NAMES = {
   'AppCode': 'appcode',
-  'Atom': 'atom',
   'Atom Beta': 'atom-beta',
+  'Atom': 'atom',
   'Brackets': 'brackets',
   'Clion': 'clion',
-  'Visual Studio Code': 'code',
-  'Visual Studio Code Insiders': 'code-insiders',
-  'VSCodium': 'codium',
   'Cursor': 'cursor',
   'Emacs': 'emacs',
   'IDEA': 'idea',
   'Notepad++': 'notepad++',
-  'PyCharm': 'pycharm',
   'PhpStorm': 'phpstorm',
+  'PyCharm': 'pycharm',
   'Rider': 'rider',
   'RubyMine': 'rubymine',
   'Sublime Text': 'sublime',
   'Vim': 'vim',
+  'Visual Studio Code Insiders': 'code-insiders',
+  'Visual Studio Code': 'code',
   'Visual Studio': 'visualstudio',
+  'VSCodium': 'codium',
   'WebStorm': 'webstorm',
   'Zed': 'zed',
 }

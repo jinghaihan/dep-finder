@@ -7,6 +7,10 @@
 
 A CLI tool for discovering dependency usage across multiple repositories. Quickly find all `package.json` and `pnpm-workspace.yaml` files that reference specific dependencies, making it easy to manage and upgrade packages across your entire project ecosystem.
 
+```
+npx dep-finder --cwd <path> --dep <package> --editor [name]
+```
+
 ## Usage
 
 <p align='center'>
