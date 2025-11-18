@@ -1,0 +1,82 @@
+{
+  "name": "dep-finder",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.22.0",
+  "description": "A CLI tool for discovering dependency usage across multiple repositories.",
+  "author": "jinghaihan",
+  "license": "MIT",
+  "homepage": "https://github.com/jinghaihan/dep-finder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghaihan/dep-finder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinghaihan/dep-finder/issues"
+  },
+  "keywords": [
+    "dependency",
+    "detect",
+    "find",
+    "launch",
+    "open"
+  ],
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./dist/cli.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "bin": {
+    "dep-finder": "./bin/cli.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsx ./src/cli.ts",
+    "build": "tsdown",
+    "deps": "taze major -I",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "release": "bumpp",
+    "bootstrap": "pnpm install",
+    "prepare": "simple-git-hooks",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "@clack/prompts": "catalog:node",
+    "ansis": "catalog:node",
+    "cac": "catalog:node",
+    "launch-editor": "catalog:prod",
+    "pathe": "catalog:node",
+    "pnpm-workspace-yaml": "catalog:prod",
+    "tinyglobby": "catalog:node"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:lint",
+    "@types/node": "catalog:types",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:lint",
+    "fast-npm-meta": "catalog:prod",
+    "lint-staged": "catalog:lint",
+    "pncat": "catalog:cli",
+    "simple-git-hooks": "catalog:lint",
+    "taze": "catalog:cli",
+    "tildify": "catalog:node",
+    "tsdown": "catalog:build",
+    "tsx": "catalog:script",
+    "typescript": "catalog:tsc",
+    "vitest": "catalog:test"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
